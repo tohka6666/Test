@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- 顶部标签导航 -->
+    <LinearLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/space_station_icon"
+                android:tint="#666666"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Space Stations"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/rocket_icon"
+                android:tint="#666666"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flights"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/rover_icon"
+                android:tint="#666666"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rovers"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 航线信息 -->
+
+    <TextView
+        android:id="@+id/txtFrom"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/arrowButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <ImageButton
+        android:id="@+id/arrowButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#E8F5E9"
+        android:scaleType="center"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@id/txtFrom"
+        app:layout_constraintEnd_toStartOf="@id/txtTo"
+        app:layout_constraintStart_toEndOf="@id/txtFrom"
+        app:layout_constraintTop_toTopOf="@id/txtFrom" />
+
+    <TextView
+        android:id="@+id/txtTo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/arrowButton"
+        app:layout_constraintTop_toTopOf="@id/txtFrom" />
+
+    <!-- 单程选项 -->
+    <TextView
+        android:id="@+id/txtOneWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One Way"
+        android:textColor="#FF9800"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFrom"
+        android:layout_marginTop="24dp" />
+
+
+    <TextView
+        android:id="@+id/txtTraveller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Traveller"
+        android:textColor="#FF9800"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtOneWay"
+        android:layout_marginTop="16dp" />
+
+
+    <ImageView
+        android:id="@+id/icRocket"
+        android:layout_width="57dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="232dp"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toTopOf="@id/btnDepart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTraveller"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <ImageView
+        android:id="@+id/icPlanet"
+        android:layout_width="182dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/galaxy"
+        app:layout_constraintBottom_toBottomOf="@id/icRocket"
+        app:layout_constraintEnd_toEndOf="@id/icRocket"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/icRocket"
+        app:layout_constraintTop_toTopOf="@id/icRocket"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDepart"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#4CAF50"
+        android:text="DEPART"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
